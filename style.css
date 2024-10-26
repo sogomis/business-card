@@ -1,0 +1,167 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to top, #ff7e5f, #feb47b);
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 0 20px; /* Pas de padding sur les côtés, 20px uniquement en bas */
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom léger sur la carte au survol */
+}
+
+.profile-photo {
+    width: 100%; /* Prendre toute la largeur de la carte */
+    height: 200px; /* Hauteur fixe pour la photo */
+    object-fit: cover; /* Couvre tout l'espace sans déformer l'image */
+    border-radius: 10px 10px 0 0; /* Arrondir uniquement les coins supérieurs */
+}
+
+h1 {
+    margin: 15px 2px 0;
+    font-size: 20px;
+}
+
+h2 {
+    margin: 5px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block; /* Ne prend que la largeur nécessaire */
+}
+
+.separator {
+    border: none; /* Supprime le contour par défaut */
+    border-top: 1px solid #ccc; /* Ajoute une ligne de séparation */
+    margin: 20px 40px;
+}
+
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-icons a {
+    position: relative; /* Nécessaire pour le positionnement de la tooltip */
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+
+.social-icons i {
+    transition: transform 0.3s; /* Transition douce pour le saut */
+}
+
+.social-icons i:hover {
+    transform: translateY(-5px); /* Fait "sauter" l'icône */
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.785);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px; /* Espace autour du texte */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position de la tooltip */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-50%); /* Ajuste pour centrer correctement */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px; /* Taille de police réduite pour la tooltip */
+    white-space: nowrap; /* Empêche le texte de se déformer sur plusieurs lignes */
+}
+
+.social-icons a:hover .tooltip {
+    visibility: visible;
+    opacity: 1; /* Rend la tooltip visible au survol */
+}
+
+.linkedin:hover {
+    color: #0077b5; /* Couleur LinkedIn */
+}
+
+.github:hover {
+    color: #5f0e80; /* Couleur GitHub */
+}
+
+.medium:hover {
+    color: #00ab6c; /* Couleur Medium */
+}
+
+
+
+.button-container {
+    display: flex; /* Utiliser Flexbox pour aligner les boutons côte à côte */
+    justify-content: center; /* Centrer les boutons horizontalement */
+    margin-top: 10px; /* Espace au-dessus des boutons */
+}
+
+.button-container a i {
+    margin-right: 5px;
+}
+
+.email-button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 2px 10px 25px;
+    border: 1px solid #d0cfcf;
+    flex: 1;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.email-button:hover {
+    color:white;
+}
+
+.sms-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 25px 10px 2px;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 5s ease-in-out infinite; /* Répète l'animation toutes les 5 secondes */
+}
+
+.email-button:hover, .sms-button:hover {
+    background-color: #f14d24;
+    transform: scale(1.05); /* Zoom léger sur la carte au survol */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Position de départ */
+    }
+    10%, 30% {
+        transform: translateY(-10px); /* Monte de 10px */
+    }
+    20% {
+        transform: translateY(-5px); /* Redescend légèrement */
+    }
+}
