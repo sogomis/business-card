@@ -1,7 +1,6 @@
-# Business Card
+# Business Card (Premiers pas sur GitHub)
 
-Bienvenue dans ce projet simple de carte de visite. 
-Mon objectif est de me familiariser avec les meilleures pratiques de développement, de documentation et de gestion de code source.
+Projet simple de carte de visite : Mon objectif est de me familiariser avec les meilleures pratiques de développement, de documentation et de gestion de code source.
 Dans ce fichier, je documente mes avancées dans ce projet avec notamment les problèmes rencontrés et leurs résolutions.
 
 ---
